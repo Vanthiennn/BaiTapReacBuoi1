@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux"
+import { actSubmitUser } from "./../redux/action/index" 
 
 class Modal extends Component {
   constructor(props) {
@@ -25,9 +27,8 @@ class Modal extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.getUser(this.state);
-
-    console.log(this.closeModal)
+    // this.props.getUser(this.state);
+    this.props.onSubmit(this.state)
     this.closeModal.current.click()
   }
 
@@ -58,7 +59,6 @@ class Modal extends Component {
   }
 
   render() {
-    console.log(this.props.userEdit)
     
     return (
       <div
@@ -120,4 +120,18 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+const mapStateToProps = (state) => {
+  return {
+    userEdit : state.userReducer.userEdit
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSubmit : (user) => {
+      dispatch(actSubmitUser(user))
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps) (Modal);

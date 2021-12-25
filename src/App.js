@@ -10,7 +10,12 @@ import ListKey from './list-key';
 import Example from './list-key/example';
 import Communication from './communication';
 import LiftingStateUpCart from './shopping-cart';
-import Home from './user-management'
+// import Home from './user-management';
+import UserManagermentRedux from "./user-management-redux"
+import GameOanTuXi from './baitapOanTuXi';
+import FromValidation from './FromValidation';
+import LifeCycle from './LifeCycle';
+import BookingTickets from './baitapBookingTicket';
 
 
 function App() {
@@ -18,8 +23,8 @@ function App() {
     <div>
       {/* <Baitap1 /> */}
       {/* <Baitap3 /> */}
-      <RenderingElements/>
-      <hr/>
+      {/* <RenderingElements/> */}
+      {/* <hr/>
       <HandlingEvents/>
       <hr/>
       <State/>
@@ -33,8 +38,18 @@ function App() {
       <Communication/>
       <hr/>
       <LiftingStateUpCart/>
-      <hr/>
-      <Home/>
+      <hr/> */}
+      {/* <Home/> */}
+      {/* <hr/> */}
+      {/* <UserManagermentRedux/> */}
+      {/* <hr/> */}
+      {/* <GameOanTuXi/> */}
+      {/* <hr/> */}
+      {/* <FromValidation/> */}
+      {/* <hr/> */}
+      {/* <LifeCycle/> */}
+      {/* <hr/> */}
+      <BookingTickets/>
     </div>
   );
 }

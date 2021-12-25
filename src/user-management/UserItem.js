@@ -19,6 +19,7 @@ class UserItem extends Component {
             className="btn btn-info mr-2"
             data-toggle="modal"
             data-target="#modelIdUser"
+            onClick={()=>{this.props.getInfo(user)}}
           >
             Edit
           </button>
